@@ -1,0 +1,143 @@
+INFO     Running translator.
+INFO     translator input: ['domain.pddl', 'Problemas/pRR-test-5R-2T-6.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python /home/seind/planin/builds/release32/bin/translate/translate.py domain.pddl Problemas/pRR-test-5R-2T-6.pddl
+Parsing...
+Parsing: [0.120s CPU, 0.159s wall-clock]
+Normalizing task... [0.010s CPU, 0.023s wall-clock]
+Instantiating...
+Generating Datalog program... [0.030s CPU, 0.033s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.100s CPU, 0.129s wall-clock]
+Preparing model... [0.100s CPU, 0.108s wall-clock]
+Generated 237 rules.
+Computing model... [3.510s CPU, 3.915s wall-clock]
+9831 relevant atoms
+28244 auxiliary atoms
+38075 final queue length
+55843 total queue pushes
+Completing instantiation... [2.590s CPU, 2.959s wall-clock]
+Instantiating: [6.370s CPU, 7.186s wall-clock]
+Computing fact groups...
+Finding invariants...
+10 initial candidates
+Finding invariants: [0.170s CPU, 0.244s wall-clock]
+Checking invariant weight... [0.010s CPU, 0.012s wall-clock]
+Instantiating groups... [0.240s CPU, 0.303s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.007s wall-clock]
+Choosing groups...
+148 uncovered facts
+Choosing groups: [0.040s CPU, 0.043s wall-clock]
+Building translation key... [0.010s CPU, 0.017s wall-clock]
+Computing fact groups: [0.530s CPU, 0.689s wall-clock]
+Building STRIPS to SAS dictionary... [0.100s CPU, 0.112s wall-clock]
+Building dictionary for full mutex groups... [0.010s CPU, 0.012s wall-clock]
+Building mutex information...
+Building mutex information: [0.020s CPU, 0.016s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.140s CPU, 0.161s wall-clock]
+Translating task: [4.460s CPU, 4.761s wall-clock]
+6676 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+10 propositions removed
+Detecting unreachable propositions: [1.640s CPU, 1.723s wall-clock]
+Reordering and filtering variables...
+152 of 152 variables necessary.
+126 of 132 mutex groups necessary.
+6620 of 6620 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.430s CPU, 0.438s wall-clock]
+Translator variables: 152
+Translator derived variables: 0
+Translator facts: 927
+Translator goal facts: 2
+Translator mutex groups: 126
+Translator total mutex groups size: 756
+Translator operators: 6620
+Translator axioms: 0
+Translator task size: 54195
+Translator peak memory: 69112 KB
+Writing output... [0.410s CPU, 0.404s wall-clock]
+Done! [14.160s CPU, 15.588s wall-clock]
+INFO     Running search (release32).
+INFO     search input: output.sas
+INFO     search arguments: ['--search', 'astar(lmcut())']
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search executable: /home/seind/planin/builds/release32/bin/downward
+INFO     callstring: /home/seind/planin/builds/release32/bin/downward --search 'astar(lmcut())' --internal-plan-file sas_plan < output.sas
+reading input... [t=8.2185e-05s]
+done reading input! [t=0.286203s]
+packing state variables...done! [t=0.286323s]
+Variables: 152
+FactPairs: 927
+Bytes per state: 24
+Building successor generator...done! [t=0.306336s]
+peak memory difference for root successor generator creation: 928 KB
+time for root successor generation creation: 0.0198206s
+done initializing global data [t=0.306577s]
+Initializing landmark cut heuristic...
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 1
+[g=0, 1 evaluated, 0 expanded, t=0.324789s, 7140 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.325005s, 7140 KB]
+Initial heuristic value for lmcut: 1
+pruning method: none
+New best heuristic value for lmcut: 0
+[g=1, 4 evaluated, 1 expanded, t=0.33213s, 7140 KB]
+f = 2 [20 evaluated, 4 expanded, t=0.361789s, 7140 KB]
+f = 3 [365 evaluated, 140 expanded, t=0.998111s, 7140 KB]
+f = 4 [3060 evaluated, 1602 expanded, t=6.25479s, 7272 KB]
+f = 5 [16700 evaluated, 10324 expanded, t=31.0904s, 8124 KB]
+Solution found!
+Actual search time: 43.9147s [t=44.24s]
+moveracasillalibre robotverde g08 g09 right (1)
+letitgo robotverde g09 g10 right verde (0)
+letitgo robotverde g10 g11 right verde (0)
+letitgo robotverde g11 g12 right verde (0)
+letitgo robotverde g12 g13 right verde (0)
+toheaven robotverde g13 f13 right verde amarillo (0)
+letitgo robotverde f13 e13 up verde (0)
+letitgo robotverde e13 d13 up verde (0)
+letitgo robotverde d13 c13 up verde (0)
+letitgo robotverde c13 b13 up verde (0)
+letitgo robotverde b13 a13 up verde (0)
+stopmihada robotverde a13 a13 up (0)
+moveracasillalibre robotazul d09 d10 right (1)
+letitgo robotazul d10 d11 right azul (0)
+stopmihada robotazul d11 d11 right (0)
+moveracasillalibre robotazul d11 c11 up (1)
+letitgo robotazul c11 b11 up azul (0)
+letitgo robotazul b11 a11 up azul (0)
+stopmihada robotazul a11 a11 up (0)
+moveracasillalibre robotverde a13 a12 left (1)
+stopmihada robotverde a12 a11 left (0)
+moveracasillalibre robotverde a12 b12 down (1)
+letitgo robotverde b12 c12 down verde (0)
+stopmihada robotverde c12 c12 down (0)
+Plan length: 24 step(s).
+Plan cost: 5
+Expanded 19161 state(s).
+Reopened 0 state(s).
+Evaluated 25630 state(s).
+Evaluations: 25630
+Generated 27172 state(s).
+Dead ends: 64 state(s).
+Expanded until last jump: 10324 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 16700 state(s).
+Generated until last jump: 17743 state(s).
+Number of registered states: 25630
+Int hash set load factor: 25630/32768 = 0.782166
+Int hash set resizes: 15
+Search time: 43.917s
+Total time: 44.24s
+Solution found.
+Peak memory: 8520 KB

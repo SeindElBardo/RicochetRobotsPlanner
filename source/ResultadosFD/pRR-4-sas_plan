@@ -1,0 +1,5 @@
+(moveracasillalibre robotrojo b01 b02 right)
+(letitgo robotrojo b02 b03 right rojo)
+(letitgo robotrojo b03 b04 right rojo)
+(stopmihada robotrojo b04 b04 right)
+; cost = 1 (general cost)

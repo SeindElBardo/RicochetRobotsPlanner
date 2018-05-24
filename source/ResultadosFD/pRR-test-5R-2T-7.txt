@@ -1,0 +1,104 @@
+INFO     Running translator.
+INFO     translator input: ['domain.pddl', 'Problemas/pRR-test-5R-2T-7.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python /home/seind/planin/builds/release32/bin/translate/translate.py domain.pddl Problemas/pRR-test-5R-2T-7.pddl
+Parsing...
+Parsing: [0.050s CPU, 0.079s wall-clock]
+Normalizing task... [0.000s CPU, 0.004s wall-clock]
+Instantiating...
+Generating Datalog program... [0.020s CPU, 0.019s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.060s CPU, 0.055s wall-clock]
+Preparing model... [0.030s CPU, 0.038s wall-clock]
+Generated 237 rules.
+Computing model... [1.370s CPU, 1.373s wall-clock]
+9831 relevant atoms
+28244 auxiliary atoms
+38075 final queue length
+55843 total queue pushes
+Completing instantiation... [1.130s CPU, 1.131s wall-clock]
+Instantiating: [2.650s CPU, 2.642s wall-clock]
+Computing fact groups...
+Finding invariants...
+10 initial candidates
+Finding invariants: [0.050s CPU, 0.048s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.004s wall-clock]
+Instantiating groups... [0.070s CPU, 0.070s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.002s wall-clock]
+Choosing groups...
+148 uncovered facts
+Choosing groups: [0.010s CPU, 0.010s wall-clock]
+Building translation key... [0.010s CPU, 0.006s wall-clock]
+Computing fact groups: [0.160s CPU, 0.159s wall-clock]
+Building STRIPS to SAS dictionary... [0.060s CPU, 0.058s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.003s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.005s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.040s CPU, 0.041s wall-clock]
+Translating task: [2.800s CPU, 3.747s wall-clock]
+6676 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+10 propositions removed
+Detecting unreachable propositions: [0.740s CPU, 0.774s wall-clock]
+Reordering and filtering variables...
+152 of 152 variables necessary.
+126 of 132 mutex groups necessary.
+6620 of 6620 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.230s CPU, 0.230s wall-clock]
+Translator variables: 152
+Translator derived variables: 0
+Translator facts: 927
+Translator goal facts: 2
+Translator mutex groups: 126
+Translator total mutex groups size: 756
+Translator operators: 6620
+Translator axioms: 0
+Translator task size: 54195
+Translator peak memory: 69112 KB
+Writing output... [0.200s CPU, 0.203s wall-clock]
+Done! [6.920s CPU, 7.939s wall-clock]
+INFO     Running search (release32).
+INFO     search input: output.sas
+INFO     search arguments: ['--search', 'astar(lmcut())']
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search executable: /home/seind/planin/builds/release32/bin/downward
+INFO     callstring: /home/seind/planin/builds/release32/bin/downward --search 'astar(lmcut())' --internal-plan-file sas_plan < output.sas
+reading input... [t=4.8304e-05s]
+done reading input! [t=0.158319s]
+packing state variables...done! [t=0.15839s]
+Variables: 152
+FactPairs: 927
+Bytes per state: 24
+Building successor generator...done! [t=0.169015s]
+peak memory difference for root successor generator creation: 928 KB
+time for root successor generation creation: 0.0105075s
+done initializing global data [t=0.169172s]
+Initializing landmark cut heuristic...
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 1
+[g=0, 1 evaluated, 0 expanded, t=0.181176s, 7140 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.181304s, 7140 KB]
+Initial heuristic value for lmcut: 1
+pruning method: none
+f = 2 [17 evaluated, 1 expanded, t=0.19946s, 7140 KB]
+f = 3 [326 evaluated, 100 expanded, t=0.493419s, 7140 KB]
+New best heuristic value for lmcut: 0
+[g=3, 1767 evaluated, 867 expanded, t=2.10021s, 7272 KB]
+f = 4 [2666 evaluated, 1207 expanded, t=3.39385s, 7272 KB]
+f = 5 [13846 evaluated, 7719 expanded, t=24.7475s, 7856 KB]
+f = 6 [56000 evaluated, 35213 expanded, t=101.496s, 10092 KB]
+f = 7 [191465 evaluated, 129275 expanded, 1 reopened, t=341.116s, 17708 KB]
+f = 8 [571475 evaluated, 405201 expanded, 13 reopened, t=1046.06s, 40636 KB]
+f = 9 [1550988 evaluated, 1136911 expanded, 132 reopened, t=2525.15s, 92044 KB]
+Peak memory: 100664 KB
+caught signal 2 -- exiting

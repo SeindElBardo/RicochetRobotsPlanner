@@ -1,0 +1,161 @@
+INFO     Running translator.
+INFO     translator input: ['domain.pddl', 'Problemas/pRR-test-5R-2T-3.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python /home/seind/planin/builds/release32/bin/translate/translate.py domain.pddl Problemas/pRR-test-5R-2T-3.pddl
+Parsing...
+Parsing: [0.040s CPU, 0.083s wall-clock]
+Normalizing task... [0.010s CPU, 0.004s wall-clock]
+Instantiating...
+Generating Datalog program... [0.010s CPU, 0.020s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.040s CPU, 0.038s wall-clock]
+Preparing model... [0.030s CPU, 0.053s wall-clock]
+Generated 237 rules.
+Computing model... [1.860s CPU, 2.277s wall-clock]
+9831 relevant atoms
+28244 auxiliary atoms
+38075 final queue length
+55843 total queue pushes
+Completing instantiation... [1.930s CPU, 2.966s wall-clock]
+Instantiating: [3.920s CPU, 5.425s wall-clock]
+Computing fact groups...
+Finding invariants...
+10 initial candidates
+Finding invariants: [0.110s CPU, 0.172s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.006s wall-clock]
+Instantiating groups... [0.120s CPU, 0.118s wall-clock]
+Collecting mutex groups... [0.010s CPU, 0.002s wall-clock]
+Choosing groups...
+148 uncovered facts
+Choosing groups: [0.010s CPU, 0.013s wall-clock]
+Building translation key... [0.010s CPU, 0.005s wall-clock]
+Computing fact groups: [0.270s CPU, 0.337s wall-clock]
+Building STRIPS to SAS dictionary... [0.040s CPU, 0.060s wall-clock]
+Building dictionary for full mutex groups... [0.010s CPU, 0.003s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.005s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.070s CPU, 0.077s wall-clock]
+Translating task: [2.340s CPU, 2.873s wall-clock]
+6676 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+10 propositions removed
+Detecting unreachable propositions: [0.810s CPU, 0.946s wall-clock]
+Reordering and filtering variables...
+152 of 152 variables necessary.
+126 of 132 mutex groups necessary.
+6620 of 6620 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.260s CPU, 0.318s wall-clock]
+Translator variables: 152
+Translator derived variables: 0
+Translator facts: 927
+Translator goal facts: 2
+Translator mutex groups: 126
+Translator total mutex groups size: 756
+Translator operators: 6620
+Translator axioms: 0
+Translator task size: 54195
+Translator peak memory: 69116 KB
+Writing output... [0.240s CPU, 0.296s wall-clock]
+Done! [7.990s CPU, 10.386s wall-clock]
+INFO     Running search (release32).
+INFO     search input: output.sas
+INFO     search arguments: ['--search', 'astar(lmcut())']
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search executable: /home/seind/planin/builds/release32/bin/downward
+INFO     callstring: /home/seind/planin/builds/release32/bin/downward --search 'astar(lmcut())' --internal-plan-file sas_plan < output.sas
+reading input... [t=4.0719e-05s]
+done reading input! [t=0.165113s]
+packing state variables...done! [t=0.165171s]
+Variables: 152
+FactPairs: 927
+Bytes per state: 24
+Building successor generator...done! [t=0.177282s]
+peak memory difference for root successor generator creation: 928 KB
+time for root successor generation creation: 0.0119944s
+done initializing global data [t=0.177468s]
+Initializing landmark cut heuristic...
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 1
+[g=0, 1 evaluated, 0 expanded, t=0.187752s, 7140 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.187877s, 7140 KB]
+Initial heuristic value for lmcut: 1
+pruning method: none
+f = 2 [17 evaluated, 1 expanded, t=0.207588s, 7140 KB]
+f = 3 [134 evaluated, 60 expanded, t=0.356846s, 7140 KB]
+f = 4 [1621 evaluated, 786 expanded, t=2.5713s, 7272 KB]
+f = 5 [9874 evaluated, 5270 expanded, t=15.4644s, 7740 KB]
+New best heuristic value for lmcut: 0
+[g=5, 11672 evaluated, 7066 expanded, t=18.376s, 7740 KB]
+f = 6 [42575 evaluated, 24586 expanded, 1 reopened, t=77.2079s, 9576 KB]
+f = 7 [146231 evaluated, 90855 expanded, 11 reopened, t=220.68s, 15740 KB]
+Solution found!
+Actual search time: 336.592s [t=336.78s]
+moveracasillalibre robotamarillo a16 b16 down (1)
+letitgo robotamarillo b16 c16 down amarillo (0)
+letitgo robotamarillo c16 d16 down amarillo (0)
+letitgo robotamarillo d16 e16 down amarillo (0)
+stopmihada robotamarillo e16 e16 down (0)
+moveracasillalibre robotgris c05 b05 up (1)
+toright robotgris b05 b06 up gris verde (0)
+letitgo robotgris b06 b07 right gris (0)
+letitgo robotgris b07 b08 right gris (0)
+letitgo robotgris b08 b09 right gris (0)
+letitgo robotgris b09 b10 right gris (0)
+letitgo robotgris b10 b11 right gris (0)
+letitgo robotgris b11 b12 right gris (0)
+letitgo robotgris b12 b13 right gris (0)
+letitgo robotgris b13 b14 right gris (0)
+letitgo robotgris b14 b15 right gris (0)
+letitgo robotgris b15 b16 right gris (0)
+stopmihada robotgris b16 b16 right (0)
+moveracasillalibre robotamarillo e16 d16 up (1)
+letitgo robotamarillo d16 c16 up amarillo (0)
+stopmihada robotamarillo c16 b16 up (0)
+moveracasillalibre robotamarillo c16 c15 left (1)
+letitgo robotamarillo c15 c14 left amarillo (0)
+letitgo robotamarillo c14 c13 left amarillo (0)
+stopmihada robotamarillo c13 c13 left (0)
+moveracasillalibre robotamarillo c13 b13 up (1)
+letitgo robotamarillo b13 a13 up amarillo (0)
+stopmihada robotamarillo a13 a13 up (0)
+moveracasillalibre robotamarillo a13 a12 left (1)
+letitgo robotamarillo a12 a11 left amarillo (0)
+letitgo robotamarillo a11 a10 left amarillo (0)
+letitgo robotamarillo a10 a09 left amarillo (0)
+letitgo robotamarillo a09 a08 left amarillo (0)
+letitgo robotamarillo a08 a07 left amarillo (0)
+stopmihada robotamarillo a07 a07 left (0)
+moveracasillalibre robotamarillo a07 b07 down (1)
+letitgo robotamarillo b07 c07 down amarillo (0)
+letitgo robotamarillo c07 d07 down amarillo (0)
+letitgo robotamarillo d07 e07 down amarillo (0)
+stopmihada robotamarillo e07 e07 down (0)
+Plan length: 40 step(s).
+Plan cost: 7
+Expanded 146047 state(s).
+Reopened 11 state(s).
+Evaluated 231568 state(s).
+Evaluations: 231568
+Generated 246176 state(s).
+Dead ends: 1208 state(s).
+Expanded until last jump: 90855 state(s).
+Reopened until last jump: 11 state(s).
+Evaluated until last jump: 146231 state(s).
+Generated until last jump: 155878 state(s).
+Number of registered states: 231568
+Int hash set load factor: 231568/524288 = 0.441681
+Int hash set resizes: 19
+Search time: 336.594s
+Total time: 336.78s
+Solution found.
+Peak memory: 23012 KB
